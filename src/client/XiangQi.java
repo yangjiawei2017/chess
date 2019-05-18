@@ -37,7 +37,7 @@ public class XiangQi extends JFrame implements ActionListener{
 	int color = 0;//0代表红旗，1代表白旗
 	Socket sc;
 	ClientAgentThread cat;
-
+//用于测试idea如何通过git提交代码
 	public XiangQi(){
 		this.initialComponent();//初始化控件
 		this.addListener();//为相应的控件添加注册事件
