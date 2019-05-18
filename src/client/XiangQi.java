@@ -10,7 +10,7 @@ import javax.swing.event.*;
 import java.net.*;
 import java.io.*;
 public class XiangQi extends JFrame implements ActionListener{
-	public static final Color bgColor=new Color(245,250,160);
+	public static final Color bgColor=new Color(245,250,160);//棋盘背景颜色
 	public static final Color focusbg=new Color(242,242,242);
 	public static final Color focuschar=new Color(96,95,91);
 	public static final Color color1=new Color(249,183,173);
@@ -36,6 +36,8 @@ public class XiangQi extends JFrame implements ActionListener{
 	boolean caiPan = false;//可否走棋的标志位
 	int color = 0;//0代表红旗，1代表白旗
 	Socket sc;
+	ClientAgentThread cat;
+
 	public XiangQi(){
 		this.initialComponent();//初始化控件
 		this.addListener();//为相应的控件添加注册事件

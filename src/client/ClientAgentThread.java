@@ -64,7 +64,7 @@ public class ClientAgentThread extends Thread{
 		this.father.jbNChallenge.setEnabled(false);
 		this.father.jbFail.setEnabled(true);
 		JOptionPane.showMessageDialog(this.father, "对方拒绝您的挑战","提示",JOptionPane.INFORMATION_MESSAGE);
-	
+		this.tiaoZhanZhe=null;
 	}
 	private void renshu() {
 		JOptionPane.showMessageDialog(this.father, "对方已认输","提示",JOptionPane.INFORMATION_MESSAGE);
@@ -81,9 +81,6 @@ public class ClientAgentThread extends Thread{
 		this.father.jbYChallenge.setEnabled(false);
 		this.father.jbNChallenge.setEnabled(false);
 		this.father.jbFail.setEnabled(false );
-		JOptionPane.showMessageDialog(this.father, "对方拒绝您的挑战","提示",JOptionPane.INFORMATION_MESSAGE);
-
-		
 	}
 	private void move(String msg) {
 		int length=msg.length();
@@ -156,6 +153,8 @@ public class ClientAgentThread extends Thread{
 		this.father.jbNChallenge.setEnabled(false);
 		this.father.jbFail.setEnabled(false);
 		this.flag = false;
+		father.cat = null;
+		JOptionPane.showMessageDialog(this.father,"服务器停止""提示",JOptionPane.INFORMATION_MESSAGE);
 	}
 	private void nick_list(String msg) {
 		// TODO Auto-generated method stub
